@@ -9,5 +9,38 @@
   <body>
     <p>Choose a date</p>
     <p><a href="index.html">Back home</a></p>
+    <form action="">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name">
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name">
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email-adress" id="email">
+
+      <label for="phone">Telephone Number</label>
+      <input type="tel" id="phone">
+
+      <label for="age">How old are you?</label>
+      <input type="text" name="age" id="age">
+       
+      <label for="meeting-time">Choose a time for your appointment:</label>
+<input type="datetime-local" id="meeting-time"
+       name="meeting-time" value="2018-06-12T19:30"
+       min="2018-06-07T00:00" max="2018-06-14T00:00">
+
+      <button id="register" type="submit">Register</button>
+    </form>
+    
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+  <script src="createevent.js"></script>
   </body>
 </html>
