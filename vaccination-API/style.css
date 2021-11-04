@@ -19,11 +19,19 @@ main {
 }
 img {
   max-width: 100%;
-  width: 90vh;
+    width: 90vh;
 }
+
 main > * {
   margin: 1.5rem 2rem;
 }
 a {
   padding-bottom: 3rem;
+  text-decoration: none;
+  color: black;
 }
+a:hover{
+  cursor: pointer;
+}
+
+
