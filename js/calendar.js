@@ -89,6 +89,10 @@ function appendPre(message) {
 function listUpcomingEvents() {
   gapi.client.calendar.events
     .list({
+      // This calendarId differs regarding our calenders of Zurich, Bern and Geneva
+      // Zurich calendarID = c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com
+      // Bern calendarID = c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com
+      // Geneva calendarID = c_0k3255mug3blnqd41tl04mches@group.calendar.google.com
       calendarId: "primary",
       timeMin: new Date().toISOString(),
       showDeleted: false,
@@ -132,6 +136,10 @@ function createEvent() {
     },
   };
   var request = gapi.client.calendar.events.insert({
+    // This calendarId differs regarding our calenders of Zurich, Bern and Geneva
+    // Zurich calendarID = c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com
+    // Bern calendarID = c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com
+    // Geneva calendarID = c_0k3255mug3blnqd41tl04mches@group.calendar.google.com
     calendarId: "primary",
     resource: event,
   });
