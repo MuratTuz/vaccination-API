@@ -117,22 +117,22 @@ function listUpcomingEvents() {
       }
     });
 }
-function createEvent() {
+function createEvent(calendarID) {
   // Refer to the JavaScript quickstart on how to setup the environment:
   // https://developers.google.com/calendar/quickstart/js
   // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
   // stored credentials.
   var event = {
-    summary: "Powercoders Event",
-    location: "800 Howard St., San Francisco, CA 94103",
+    summary: "Powercoders Event Group 5",
+    location: "Zurich",
     description: "A chance to hear more about Google's developer products.",
     start: {
-      dateTime: "2021-11-05T09:00:00-07:00",
-      timeZone: "America/Los_Angeles",
+      dateTime: "2021-11-07T09:00:00-07:00",
+      timeZone: "Europe/Zurich",
     },
     end: {
-      dateTime: "2021-11-05T10:00:00-07:00",
-      timeZone: "America/Los_Angeles",
+      dateTime: "2021-11-07T10:00:00-07:00",
+      timeZone: "Europe/Zurich",
     },
   };
   var request = gapi.client.calendar.events.insert({
@@ -140,7 +140,7 @@ function createEvent() {
     // Zurich calendarID = c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com
     // Bern calendarID = c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com
     // Geneva calendarID = c_0k3255mug3blnqd41tl04mches@group.calendar.google.com
-    calendarId: "primary",
+    calendarId: calendarID,
     resource: event,
   });
   request.execute(function (event) {
@@ -150,3 +150,11 @@ function createEvent() {
 document
   .getElementById("create-event-button")
   .addEventListener("click", createEvent);
+
+// We group 5 has added
+document.getElementById("zhbutton").onclick = zhClic;
+
+function zhClic() {
+  var id = "c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com";
+  createEvent(id);
+}
