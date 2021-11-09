@@ -117,14 +117,14 @@ function listUpcomingEvents() {
       }
     });
 }
-function createEvent(calendarID) {
+function createEvent(calendarID,praxis) {
   // Refer to the JavaScript quickstart on how to setup the environment:
   // https://developers.google.com/calendar/quickstart/js
   // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
   // stored credentials.
   var event = {
     summary: "Powercoders Event Group 5",
-    location: "Zurich",
+    location: praxis,
     description: "A chance to hear more about Google's developer products.",
     start: {
       dateTime: "2021-11-07T09:00:00-07:00",
@@ -152,9 +152,27 @@ document
   .addEventListener("click", createEvent);
 
 // We group 5 has added
-document.getElementById("zhbutton").onclick = zhClic;
-
-function zhClic() {
-  var id = "c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com";
-  createEvent(id);
+var zurich = document.getElementById("zhbutton");
+zurich.addEventListener("click",zhClick);
+function zhClick() {
+ var id =  `c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com`;
+  var praxisLocation = "Zurich"
+  createEvent(id,praxisLocation);
 }
+
+var bern = document.getElementById("bebutton");
+bern.addEventListener("click",bClick);
+function bClick(){
+ var id = "c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com";
+ var praxisLocation = "Bern"
+  createEvent(id,praxisLocation);
+}
+ 
+var geneva = document.getElementById("gebutton");
+geneva.addEventListener("click",geClick);
+function geClick(){
+ var id = "c_0k3255mug3blnqd41tl04mches@group.calendar.google.com";
+ var praxisLocation = "Geneva"
+  createEvent(id,praxisLocation);
+}
+
