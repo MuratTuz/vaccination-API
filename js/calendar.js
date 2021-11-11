@@ -40,7 +40,8 @@ function initClient() {
         signoutButton.onclick = handleSignoutClick;
       },
       function (error) {
-        appendPre(JSON.stringify(error, null, 2));
+        window.confirm(JSON.stringify(error, null, 2));
+        /* appendPre(JSON.stringify(error, null, 2)); */
       }
     );
 }
@@ -93,7 +94,7 @@ function listUpcomingEvents() {
       // Zurich calendarID = c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com
       // Bern calendarID = c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com
       // Geneva calendarID = c_0k3255mug3blnqd41tl04mches@group.calendar.google.com
-      calendarId: "primary",
+      calendarId: "c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com",
       timeMin: new Date().toISOString(),
       showDeleted: false,
       singleEvents: true,
