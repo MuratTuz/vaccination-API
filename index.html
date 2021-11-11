@@ -1,231 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Welcome to Vaccination API</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" media="screen and (max-width: 650px)" href="css/smallscreen.css" />
-  <link rel="stylesheet" href="./css/form.css">
+  <head>
+    <title>Welcome to Vaccination API</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 650px)"
+      href="css/smallscreen.css"
+    />
+    <link rel="stylesheet" href="./css/form.css" />
   </head>
 
-<body>
-  <header>
-    <section>
-      <h1 class="anime-h1">VACCINATION API</h1>
-      <div>
-        <img class="logo-covac" src="images/logoCovac.png" alt="vaccination" />
-        </div>
-        </section>
-        <nav class="navbar">
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="#Home">Home</a></li>
-            <li class="nav-item"><a href="#Centers">CoVAC Centers</a></li>
-            <li class="nav-item"><a href="#Zurich">Zurich</a></li>
-            <li class="nav-item"><a href="#Bern">Bern</a></li>
-            <li class="nav-item"><a href="#Geneva">Geneva</a></li>
-            <li class="nav-item"><a href="#About">About Us</a></li>
-            <li class="nav-item"><a href="#Contact">Contact</a></li>
-          </ul>
-        </nav>
-        </header>
-        <main>
-          <article id="Home">
-            <section class="card">
-              <img src="./images/intro.png" alt="Vaccinated People" />
-            </section>
-            <section class="description">
-              <p>
-                Since every vaccine in Switzerland must be authorised, it has to
-                meet stringent safety, efficacy and quality requirements.
-                Swissmedic, the Swiss Agency for Therapeutic Products, has carefully
-                assessed and authorised the mRNA vaccines against COVID-19. They are
-                safe and effective. Several tens of thousands of people have
-                received the vaccines in clinical trials. They are also safe and
-                effective for the elderly and those with chronic illnesses.Since
-                their approval, hundreds of millions of people have received these
-                vaccines. Experts will continue to monitor the safety and efficacy
-                of the vaccines. The benefits of a vaccine must significantly
-                outweigh the risks. Only then will the vaccine be recommended in
-                Switzerland.
-              </p>
-              <!--Add buttons to initiate auth sequence and sign out-->
-              <button id="authorize_button" style="display: none">Authorize</button>
-              <button id="signout_button" style="display: none">Sign Out</button>
-              <button id="create-event-button">Create Event</button>
-              <pre id="content" style="white-space: pre-wrap"></pre>
-            </section>
-          </article>
-
-    <article id="Centers">
-      <h1>CoVAC VACCINATION CENTERS</h1>
-      <section class="card">
-        <a href="#Zurich">
-          <div class="pack">
-            <img src="./images/zurich.jpeg" alt="Zurich" />
-            <h2>Zurich</h2>
-          </div>
-        </a>
-        <a href="#Bern">
-          <div class="pack">
-            <img src="./images/bern.jpeg" alt="Bern" />
-            <h2>Bern</h2>
-          </div>
-        </a>
-        <a href="#Geneva">
-          <div class="pack">
-            <img src="./images/geneva.jpeg" alt="Geneva" />
-            <h2>Geneva</h2>
-          </div>
-        </a>
-        <p>
-          The vaccination centres currently in operation in the cantons with
-          an appointment, are shown above and referenced to Google calendar
-          appointment system.
-        </p>
-        <p>
-          To register for a Covid-19 vaccination and make an appointment,
-          please select a city of the appropriate vaccination centre for you.
-          Afterward, select a time slot of which suits you the best in the
-          calendar.
-        </p>
-      </section>
-    </article>
-
-    <article class="City" id="Zurich">
-      <h1>ZURICH</h1>
-      <section class="card">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%2380baed&ctz=Europe%2FZurich&title=Zurich%20Vaccination%20Appointments&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=Y19ma3JkazE3b3ZkbTQ0NWIwOTk4M2kwM3M1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E&color=%230B8043"
-          style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
-      </section>
-      <button id="zhbutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-        </form>
-        </article>
-
-    <article class="City" id="Bern">
-      <h1>BERN</h1>
-      <section class="card">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23F6BF26&ctz=Europe%2FZurich&title=Bern%20Vaccination%20Appointments&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=Y190b242NmZkczYwczAzcmZxNW00ZmM0b29lNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E&color=%230B8043"
-          style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
-      </section>
-      <button id="bebutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden" data-location="Bern">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-        </form>
-        </article>
-
-    <article class="City" id="Geneva">
-      <h1>GENEVA</h1>
-      <section class="card">
-        <iframe
-          src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23C0CA33&ctz=Europe%2FZurich&title=Geneva%20Vaccination%20Appointments&showPrint=0&showCalendars=0&showTabs=0&showTz=1&mode=WEEK&src=Y18wazMyNTVtdWczYmxucWQ0MXRsMDRtY2hlc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E4C441&color=%230B8043"
-          style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
-      </section>
-      <button id="gebutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-      </form>
-      </article>
-
-    <article id="About">
-      <h1>POWERCODERS GROUP 5</h1>
-      <section class="card">
-        <img src="./images/group5.png" alt="Our Team" />
-      </section>
-      <section class="description">
-        <p>
-          Our team has developed this project for your health thanks to
-          PowerCoders
-        </p>
-        <p>The members of the team are:</p>
-        <p>Nasrin JAFARI</p>
-        <p>Omran ZAMZAM</p>
-        <p>Adnan ALJASEM</p>
-        <p>Murat TUZLALI</p>
-      </section>
-    </article>
-
-    <article id="Contact">
-      <section class="card">
-        <div class="contact">
-          <h1 class="envh1">Contact Us</h1>
-          <div class="envelope">
-            <div class="top">
-              <div class="outer">
-                <div class="inner"></div>
-              </div>
-            </div>
-            <div class="bottom"></div>
-            <div class="left"></div>
-            <div class="right"></div>
-            <div class="cover"></div>
-            <div class="paper">
-              <span class="call"> &#128526;Your name </span>
-              <span class="mail"> &#128231;Your email </span>
-            </div>
-          </div>
+  <body>
+    <header>
+      <section>
+        <h1 class="anime-h1">VACCINATION API</h1>
+        <div>
+          <img
+            class="logo-covac"
+            src="images/logoCovac.png"
+            alt="vaccination"
+          />
         </div>
       </section>
-      <section class="description">
-        <form class="form-container">
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" />
-
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
-
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject"></textarea>
-          <button id="send-letter">Send</button>
-          </form>
-          </section>
-          </article>
-          </main>
-          <footer>
-            <section id="footer-connect">
-      <a href="https://www.facebook.com/"><img src="images/icon-facebook.gif" alt="facebook" /></a>
-      <a href="https://twitter.com/"><img src="images/icon-twitter.gif" alt="twitter" /></a>
-      <a href="https://www.youtube.com/"><img src="images/icon-youtube.gif" alt="youtube" /></a>
-      </section>
-
-    <section id="footer-nav">
-      <nav>
-        <ul>
+      <nav class="navbar">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
           <li class="nav-item"><a href="#Home">Home</a></li>
           <li class="nav-item"><a href="#Centers">CoVAC Centers</a></li>
           <li class="nav-item"><a href="#Zurich">Zurich</a></li>
@@ -235,22 +42,245 @@
           <li class="nav-item"><a href="#Contact">Contact</a></li>
         </ul>
       </nav>
-      <article>
-        <ul>
-          <li>Copyright &copy;</li>
-          <li>All Rights Reserved</li>
-          <li>Desing By Group 5</li>
-        </ul>
+    </header>
+    <main>
+      <article id="Home">
+        <section class="card">
+          <img src="./images/intro.png" alt="Vaccinated People" />
+        </section>
+        <section class="description">
+          <p>
+            Since every vaccine in Switzerland must be authorised, it has to
+            meet stringent safety, efficacy and quality requirements.
+            Swissmedic, the Swiss Agency for Therapeutic Products, has carefully
+            assessed and authorised the mRNA vaccines against COVID-19. They are
+            safe and effective. Several tens of thousands of people have
+            received the vaccines in clinical trials. They are also safe and
+            effective for the elderly and those with chronic illnesses.Since
+            their approval, hundreds of millions of people have received these
+            vaccines. Experts will continue to monitor the safety and efficacy
+            of the vaccines. The benefits of a vaccine must significantly
+            outweigh the risks. Only then will the vaccine be recommended in
+            Switzerland.
+          </p>
+          <!--Add buttons to initiate auth sequence and sign out-->
+          <button id="authorize_button" style="display: none">Authorize</button>
+          <button id="signout_button" style="display: none">Sign Out</button>
+          <button id="create-event-button">Create Event</button>
+          <pre id="content" style="white-space: pre-wrap"></pre>
+        </section>
       </article>
-    </section>
+
+      <article id="Centers">
+        <h1>CoVAC VACCINATION CENTERS</h1>
+        <section class="card">
+          <a href="#Zurich">
+            <div class="pack">
+              <img src="./images/zurich.jpeg" alt="Zurich" />
+              <h2>Zurich</h2>
+            </div>
+          </a>
+          <a href="#Bern">
+            <div class="pack">
+              <img src="./images/bern.jpeg" alt="Bern" />
+              <h2>Bern</h2>
+            </div>
+          </a>
+          <a href="#Geneva">
+            <div class="pack">
+              <img src="./images/geneva.jpeg" alt="Geneva" />
+              <h2>Geneva</h2>
+            </div>
+          </a>
+          <p>
+            The vaccination centres currently in operation in the cantons with
+            an appointment, are shown above and referenced to Google calendar
+            appointment system.
+          </p>
+          <p>
+            To register for a Covid-19 vaccination and make an appointment,
+            please select a city of the appropriate vaccination centre for you.
+            Afterward, select a time slot of which suits you the best in the
+            calendar.
+          </p>
+        </section>
+      </article>
+
+      <article class="City" id="Zurich">
+        <h1>ZURICH</h1>
+        <section class="card">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%2380baed&ctz=Europe%2FZurich&title=Zurich%20Vaccination%20Appointments&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=Y19ma3JkazE3b3ZkbTQ0NWIwOTk4M2kwM3M1Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E&color=%230B8043"
+            style="border: solid 1px #777"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </section>
+        <button id="zhbutton" class="btnAppointment">Get Appointment</button>
+        <form action="" class="form hidden">
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+          <label for="meeting-time">Your appointment:</label>
+          <input type="datetime-local" id="meeting-time" name="meeting-time" />
+          <button id="register" type="submit">Register</button>
+        </form>
+      </article>
+
+      <article class="City" id="Bern">
+        <h1>BERN</h1>
+        <section class="card">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23F6BF26&ctz=Europe%2FZurich&title=Bern%20Vaccination%20Appointments&showPrint=0&showTabs=0&showCalendars=0&mode=WEEK&src=Y190b242NmZkczYwczAzcmZxNW00ZmM0b29lNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E&color=%230B8043"
+            style="border: solid 1px #777"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </section>
+        <button id="bebutton" class="btnAppointment">Get Appointment</button>
+        <form action="" class="form hidden" data-location="Bern">
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+          <label for="meeting-time">Your appointment:</label>
+          <input type="datetime-local" id="meeting-time" name="meeting-time" />
+          <button id="register" type="submit">Register</button>
+        </form>
+      </article>
+
+      <article class="City" id="Geneva">
+        <h1>GENEVA</h1>
+        <section class="card">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23C0CA33&ctz=Europe%2FZurich&title=Geneva%20Vaccination%20Appointments&showPrint=0&showCalendars=0&showTabs=0&showTz=1&mode=WEEK&src=Y18wazMyNTVtdWczYmxucWQ0MXRsMDRtY2hlc0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uY2gjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E4C441&color=%230B8043"
+            style="border: solid 1px #777"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </section>
+        <button id="gebutton" class="btnAppointment">Get Appointment</button>
+        <form action="" class="form hidden">
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+          <label for="meeting-time">Your appointment:</label>
+          <input type="datetime-local" id="meeting-time" name="meeting-time" />
+          <button id="register" type="submit">Register</button>
+        </form>
+      </article>
+
+      <article id="About">
+        <h1>POWERCODERS GROUP 5</h1>
+        <section class="card">
+          <img src="./images/group5.png" alt="Our Team" />
+        </section>
+        <section class="description">
+          <p>
+            Our team has developed this project for your health thanks to
+            PowerCoders
+          </p>
+          <p>The members of the team are:</p>
+          <p>Nasrin JAFARI</p>
+          <p>Omran ZAMZAM</p>
+          <p>Adnan ALJASEM</p>
+          <p>Murat TUZLALI</p>
+        </section>
+      </article>
+
+      <article id="Contact">
+        <section class="card">
+          <div class="contact">
+            <h1 class="envh1">Contact Us</h1>
+            <div class="envelope">
+              <div class="top">
+                <div class="outer">
+                  <div class="inner"></div>
+                </div>
+              </div>
+              <div class="bottom"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="cover"></div>
+              <div class="paper">
+                <span class="call"> &#128526;Your name </span>
+                <span class="mail"> &#128231;Your email </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="description">
+          <form class="form-container">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" />
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject"></textarea>
+            <button id="send-letter">Send</button>
+          </form>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <section id="footer-connect">
+        <a href="https://www.facebook.com/"
+          ><img src="images/icon-facebook.gif" alt="facebook"
+        /></a>
+        <a href="https://twitter.com/"
+          ><img src="images/icon-twitter.gif" alt="twitter"
+        /></a>
+        <a href="https://www.youtube.com/"
+          ><img src="images/icon-youtube.gif" alt="youtube"
+        /></a>
+      </section>
+
+      <section id="footer-nav">
+        <nav>
+          <ul>
+            <li class="nav-item"><a href="#Home">Home</a></li>
+            <li class="nav-item"><a href="#Centers">CoVAC Centers</a></li>
+            <li class="nav-item"><a href="#Zurich">Zurich</a></li>
+            <li class="nav-item"><a href="#Bern">Bern</a></li>
+            <li class="nav-item"><a href="#Geneva">Geneva</a></li>
+            <li class="nav-item"><a href="#About">About Us</a></li>
+            <li class="nav-item"><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+        <article>
+          <ul>
+            <li>Copyright &copy;</li>
+            <li>All Rights Reserved</li>
+            <li>Desing By Group 5</li>
+          </ul>
+        </article>
+      </section>
     </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="/js/calendar.js"></script>
-  <script src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
-    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
-  <script src="./js/form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="/js/calendar.js"></script>
+    <script
+      src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+    ></script>
+    <script src="./js/form.js"></script>
   </body>
-
 </html>
