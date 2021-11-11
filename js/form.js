@@ -30,7 +30,7 @@ const hideForm = function (event) {
 const form = document.querySelector(".form");
 const getAppointment = document.querySelectorAll(".btnAppointment");
 const btnCloseForm = document.querySelector(".close-form");
-
+btnCloseForm.addEventListener("click", hideForm);
 getAppointment.forEach((app) => {
   app.addEventListener("click", showForm);
 });
