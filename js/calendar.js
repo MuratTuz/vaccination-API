@@ -175,20 +175,20 @@ function handleRegisterClick(id, location) {
 }
 
 
-// var bern = document.getElementById("register");
-// bern.addEventListener("click",bClick);
-// function bClick(){
-//  var id = "c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com";
-//  var praxisLocation = "Bern"
-//  var description1 = firstname.value;
-//   createEvent(id,praxisLocation,description1);
-// }
+var bern = document.getElementById("register");
+bern.addEventListener("click",(e)=>{
+  e.preventDefault()
+  var id =  `c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com`;
+   var praxisLocation = "Bern"
+   handleRegisterClick(id, praxisLocation)
+});
+
  
-var geneva = document.getElementById("gebutton");
-geneva.addEventListener("click",geClick);
-function geClick(){
- var id = "c_0k3255mug3blnqd41tl04mches@group.calendar.google.com";
- var praxisLocation = "Geneva"
-  createEvent(id,praxisLocation);
-}
+var geneva = document.getElementById("register");
+geneva.addEventListener("click",(e)=>{
+  e.preventDefault()
+  var id =  `c_0k3255mug3blnqd41tl04mches@group.calendar.google.com`;
+   var praxisLocation = "Bern"
+   handleRegisterClick(id, praxisLocation)
+});
 
