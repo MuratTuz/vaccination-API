@@ -117,7 +117,7 @@ function listUpcomingEvents() {
       }
     });
 }
-function createEvent(calendarID,praxis) {
+function createEvent(calendarID,praxis,description1) {
   // Refer to the JavaScript quickstart on how to setup the environment:
   // https://developers.google.com/calendar/quickstart/js
   // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
@@ -125,7 +125,8 @@ function createEvent(calendarID,praxis) {
   var event = {
     summary: "Powercoders Event Group 5",
     location: praxis,
-    description: "A chance to hear more about Google's developer products.",
+    description: description1,
+    // when : dateTime,
     start: {
       dateTime: "2021-11-07T09:00:00-07:00",
       timeZone: "Europe/Zurich",
@@ -159,13 +160,16 @@ function zhClick() {
   var praxisLocation = "Zurich"
   createEvent(id,praxisLocation);
 }
+var firstname = document.getElementById("first-name");
+// var time = document.getElementById("meeting-time").value;
 
-var bern = document.getElementById("bebutton");
+var bern = document.getElementById("register");
 bern.addEventListener("click",bClick);
 function bClick(){
  var id = "c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com";
  var praxisLocation = "Bern"
-  createEvent(id,praxisLocation);
+ var description1 = firstname.value;
+  createEvent(id,praxisLocation,description1);
 }
  
 var geneva = document.getElementById("gebutton");

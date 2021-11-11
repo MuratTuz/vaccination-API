@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" media="screen and (max-width: 650px)" href="css/smallscreen.css">
+  <link rel="stylesheet" href="./css/form.css">
 </head>
 
 <body>
@@ -102,6 +103,35 @@
             style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
         </section>
         <button id="zhbutton">Get Appointment</button>
+        <form action="" class="form hidden">
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+    
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+    
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+    
+          <label for="phone">Telephone Number</label>
+          <input type="tel" id="phone" />
+    
+          <label for="age">How old are you?</label>
+          <input type="text" name="age" id="age" />
+    
+          <label for="meeting-time">Choose a time for your appointment:</label>
+          <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            value="2018-06-12T19:30"
+            min="2018-06-07T00:00"
+            max="2018-06-14T00:00"
+          />
+    
+          <button id="register" type="submit">Register</button>
+        </form>
       </article>
       
       <article class="City" id="Bern">
@@ -112,6 +142,31 @@
             style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
         </section>
         <button id="bebutton">Get Appointment</button>
+        <form action="" class="form hidden" >
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+    
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+    
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+    
+          <label for="phone">Telephone Number</label>
+          <input type="tel" id="phone" />
+    
+          <label for="age">How old are you?</label>
+          <input type="text" name="age" id="age" />
+    
+          <label for="meeting-time">Choose a time for your appointment:</label>
+          <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time" />
+    
+          <button id="register" type="submit">Register</button>
+        </form>
       </article>
       
       <article class="City" id="Geneva">
@@ -122,6 +177,35 @@
             style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
         </section>
         <button id="gebutton">Get Appointment</button>
+        <form action="" class="form hidden">
+          <button class="close-form">&times;</button>
+          <label class="first-name" for="first-name">First Name</label>
+          <input type="text" id="first-name" />
+    
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" />
+    
+          <label for="email">Email Address</label>
+          <input type="email" name="email-adress" id="email" />
+    
+          <label for="phone">Telephone Number</label>
+          <input type="tel" id="phone" />
+    
+          <label for="age">How old are you?</label>
+          <input type="text" name="age" id="age" />
+    
+          <label for="meeting-time">Choose a time for your appointment:</label>
+          <input
+            type="datetime-local"
+            id="meeting-time"
+            name="meeting-time"
+            value="2018-06-12T19:30"
+            min="2018-06-07T00:00"
+            max="2018-06-14T00:00"
+          />
+    
+          <button id="register" type="submit">Register</button>
+        </form>
       </article>
       
       <article id="About">
@@ -228,6 +312,7 @@
   <script src="/js/calendar.js"></script>
   <script src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
     onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>
