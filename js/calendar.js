@@ -157,18 +157,21 @@ var firstname = document.getElementById("first-name");
 var time = document.getElementById("meeting-time");
 
 var register = document.getElementById("register");
-register.addEventListener("click",zhClick);
-function zhClick() {
-  // e.preventDefault()
+register.addEventListener("click", (e) => {
+  e.preventDefault()
  var id =  `c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com`;
   var praxisLocation = "Zurich"
+  handleRegisterClick(id, praxisLocation)
+});
+
+
+function handleRegisterClick(id, location) {
   var description1 = firstname.value;
   var date = new Date(time.value);
-  const endTime = date.setMinutes(date.getMinutes()+15)
- const endDate = new Date(endTime).toISOString().substring(0,19)
-  createEvent(id,praxisLocation,description1,date,endDate);
+  const endTime = date.setMinutes(date.getMinutes()+15);
+ const endDate = new Date(endTime).toISOString().substring(0,19);
+  createEvent(id,location,description1,date,endDate);
 }
-
 
 
 // var bern = document.getElementById("register");

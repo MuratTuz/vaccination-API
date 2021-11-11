@@ -11,6 +11,7 @@
       media="screen and (max-width: 650px)"
       href="css/smallscreen.css"
     />
+    <link rel="stylesheet" href="./css/form.css">
   </head>
   <body>
     <header>
@@ -117,15 +118,12 @@
           <input type="text" id="first-name" />
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" />
-          <!-- <label for="email">Email Address</label>
-          <input type="email" name="email-adress" id="email" /> -->
           <label for="meeting-time">Choose a time for your appointment:</label>
           <input
             type="datetime-local"
             id="meeting-time"
             name="meeting-time"
           />
-          
           <button id="register" type="submit">Register</button>
         </form>
       </article>
@@ -141,25 +139,20 @@
           ></iframe>
         </section>
         <button id="bebutton">Get Appointment</button>
-        <!-- <form action="" class="form hidden">
+        <form action="" class="form hidden" data-location="Bern">
           <button class="close-form">&times;</button>
           <label class="first-name" for="first-name">First Name</label>
           <input type="text" id="first-name" />
           <label for="last-name">Last Name</label>
           <input type="text" id="last-name" />
-          <label for="email">Email Address</label>
-          <input type="email" name="email-adress" id="email" />
           <label for="meeting-time">Choose a time for your appointment:</label>
           <input
             type="datetime-local"
             id="meeting-time"
             name="meeting-time"
-            value="2018-06-12T19:30"
-            min="2018-06-07T00:00"
-            max="2018-06-14T00:00"
           />
           <button id="register" type="submit">Register</button>
-        </form> -->
+        </form>
       </article>
 
       <article class="City" id="Geneva">
@@ -304,5 +297,6 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"
     ></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
