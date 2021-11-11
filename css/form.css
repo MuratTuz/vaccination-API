@@ -76,7 +76,8 @@
     border-radius: 0.5rem;
   }
   #register,
-  #zhbutton {
+  #zhbutton ,
+  #bebutton{
     margin: 1rem auto 0;
     font-weight: 800;
     padding: 0.5rem 2rem;
@@ -89,7 +90,8 @@
     cursor: pointer;
   }
   #register:hover,
-  #zhbutton:hover {
+  #zhbutton:hover,
+  #bebutton:hover {
     background-color: rgb(58, 56, 56);
     color: aquamarine;
   }

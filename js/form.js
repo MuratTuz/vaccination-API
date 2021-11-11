@@ -1,5 +1,6 @@
 const form = document.querySelector(".form");
 const btnGetAppointment = document.querySelector("#zhbutton");
+
 const btnCloseForm = document.querySelector(".close-form");
 
 const showForm = function () {
@@ -7,7 +8,13 @@ const showForm = function () {
 };
 
 btnGetAppointment.addEventListener("click", showForm);
+berbAppointment.addEventListener("click",showForm)
 const hideForm = function () {
   form.classList.add("hidden");
 };
-btnCloseForm.addEventListener("click", hideForm);
+
+
+const form = document.querySelector(".form1");
+const berbAppointment = document.getElementById("bebutton");
+
+
