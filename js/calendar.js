@@ -155,7 +155,9 @@ document
 
 // We group 5 has added
 var firstname = document.getElementById("first-name");
+var lastName = document.querySelector("#last-name");
 var time = document.getElementById("meeting-time");
+var emails = document.getElementById("email")
 
 var register = document.getElementById("register");
 register.addEventListener("click", (e) => {
@@ -167,10 +169,12 @@ register.addEventListener("click", (e) => {
 
 
 function handleRegisterClick(id, location) {
-  var description1 = firstname.value;
+  var description1 =`${firstname.value}  ${lastName.value}  ${emails.value}` ;
   var date = new Date(time.value);
   const endTime = date.setMinutes(date.getMinutes()+15);
  const endDate = new Date(endTime).toISOString().substring(0,19);
+ console.log(date);
+ console.log(endDate);
   createEvent(id,location,description1,date,endDate);
 }
 
@@ -188,7 +192,7 @@ var geneva = document.getElementById("register");
 geneva.addEventListener("click",(e)=>{
   e.preventDefault()
   var id =  `c_0k3255mug3blnqd41tl04mches@group.calendar.google.com`;
-   var praxisLocation = "Bern"
+   var praxisLocation = "Geneva"
    handleRegisterClick(id, praxisLocation)
 });
 
