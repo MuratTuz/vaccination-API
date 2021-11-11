@@ -24,8 +24,8 @@ body {
 /* --------- Header --------- */
 header {
   background-color: #284f75;
-  background-image: linear-gradient(to right, #284f75 , whitesmoke);
-  height: 200px;
+  background-image: linear-gradient(to right, #284f75, whitesmoke);
+  height: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,21 +46,21 @@ header section {
 }
 
 .anime-h1 {
+  padding-top: 25px;
   font-size: 80px;
   font-weight: 600;
-  color:#ABF7D5;
+  color: #abf7d5;
   text-align: center;
   display: inline-block;
   text-shadow: 3px 3px #101010;
- /*  word-wrap:break-word; */
+  /*  word-wrap:break-word; */
   /* overflow-wrap: break-word; */
 }
 
 .anime-h1 .letter {
-  display:inline-block;
+  display: inline-block;
   line-height: 1em;
 }
-
 
 .logo-covac {
   width: 15vw;
@@ -139,9 +139,9 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   /* position: relative; */
-  margin-top:200px;
+  margin-top: 200px;
 }
-h2{
+h2 {
   text-align: center;
 }
 main > article {
@@ -151,60 +151,61 @@ main > article {
   padding: 2em 0;
   border-radius: 1%;
 }
-#Home{
-display: flex;
-flex-direction: column;
-padding: 2rem;
-}
-#Home .card, #Home .card img{
-  width: 100%;
-}
-#Centers{
+#Home {
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
-#Centers h1{
+#Home .card,
+#Home .card img {
+  width: 100%;
+}
+#Centers {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+#Centers h1 {
   font-size: xx-large;
   align-self: center;
 }
-#Centers .card{
+#Centers .card {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.pack{
+.pack {
   display: flex;
   flex-direction: column;
 }
-.pack img{
+.pack img {
   max-width: 18vw;
   min-height: 25vh;
 }
-.pack:hover{
+.pack:hover {
   transform: scale(1.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
-.City{
+.City {
   display: flex;
   flex-direction: column;
   padding: 2rem;
 }
-.City h1{
+.City h1 {
   font-size: xx-large;
   align-self: center;
 }
-.City h2{
+.City h2 {
   font-size: large;
 }
-.City .card{
+.City .card {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-#About{
+#About {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,18 +214,18 @@ padding: 2rem;
   width: 65vw;
   box-sizing: border-box;
 }
-#Contact .card{
+#Contact .card {
   width: 25vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#Contact .description{
+#Contact .description {
   width: 35vw;
-/*   text-align: justify; */
+  /*   text-align: justify; */
 }
 
-iframe{
+iframe {
   width: 60vw;
   height: 60vh;
 }
@@ -248,15 +249,14 @@ main > article:nth-of-type(even) {
   flex-wrap: wrap;
 }
 
-
 article .description {
   text-align: justify;
 }
 
-
 /* ----------- Contact Form -------------- */
 
-form input, textarea {
+form input,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -268,7 +268,7 @@ form input, textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
 }
-textarea{
+textarea {
   height: 200px;
 }
 
@@ -279,7 +279,6 @@ textarea{
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  
 }
 
 #send-letter:hover {
@@ -293,8 +292,8 @@ textarea{
   color: whitesmoke;
   text-align: left;
 }
-#send-letter{
-  color:black;
+#send-letter {
+  color: black;
 }
 
 /* ----------- Footer -------------- */
@@ -360,188 +359,193 @@ footer #footer-connect {
   align-items: center;
 }
 
-  @media screen and (max-width: 880px) {
-    html{
-        scroll-padding-top: 40vw;
-    }
-    .anime-h1 .letter{
-      display: inline;
-    }
+@media screen and (max-width: 880px) {
+  html {
+    scroll-padding-top: 40vw;
+  }
+  .anime-h1 .letter {
+    display: inline;
+  }
 }
-
 
 /* ------------ Form animation ------------ */
 
-
 .contact {
-	 	position: relative;
-		/*left: 50%;
+  position: relative;
+  /*left: 50%;
 		top: 50%;
 		margin-left: -125px;
 		margin-top: -125px; */
-		height: 250px;
-		width: 250px;
-		background: rgba(0, 0, 0, 0.1);
-		
-		border-radius: 2px;
-		-ms-border-radius: 2px;
-		-moz-border-radius: 2px;
-		-o-border-radius: 2px;
-		-webkit-border-radius: 2px;
+  height: 250px;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.1);
+
+  border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
 }
-.envh1{
+.envh1 {
   text-align: center;
 }
 .contact .envelope {
-		position: absolute;
-		left: 50%;
-		margin-left: -83px;
-		top: 50%;
-		margin-top: 0;
-		height: 93px;
-		width: 165px;
-    background: #F9F9F9;
-		
-		transition: margin-top 300ms;
-		-ms-transition: margin-top 300ms;
-		-moz-transition: margin-top 300ms;
-		-o-transition: margin-top 300ms;
-		-webkit-transition: margin-top 300ms;
+  position: absolute;
+  left: 50%;
+  margin-left: -83px;
+  top: 50%;
+  margin-top: 0;
+  height: 93px;
+  width: 165px;
+  background: #f9f9f9;
+
+  transition: margin-top 300ms;
+  -ms-transition: margin-top 300ms;
+  -moz-transition: margin-top 300ms;
+  -o-transition: margin-top 300ms;
+  -webkit-transition: margin-top 300ms;
 }
 .contact:hover .envelope {
-		transition-delay: 150ms;
-		-ms-transition-delay: 150ms;
-		-moz-transition-delay: 150ms;
-		-o-transition-delay: 150ms;
-		margin-top: -20px;
+  transition-delay: 150ms;
+  -ms-transition-delay: 150ms;
+  -moz-transition-delay: 150ms;
+  -o-transition-delay: 150ms;
+  margin-top: -20px;
 }
 .contact .envelope .top {
-		position: absolute;
-		top: -3px;
-		left: 0px;
-		width: 100%;
-		height: 73px;
-		z-index: 30;
-		overflow: hidden;
-						
-		transform-origin: top;
-		-ms-transform-origin: top;
-		-moz-transform-origin: top;
-		-o-transform-origin: top;
-		-webkit-transform-origin: top;
-					
-		transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  width: 100%;
+  height: 73px;
+  z-index: 30;
+  overflow: hidden;
+
+  transform-origin: top;
+  -ms-transform-origin: top;
+  -moz-transform-origin: top;
+  -o-transform-origin: top;
+  -webkit-transform-origin: top;
+
+  transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms,
+    top 300ms 0ms;
+  -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms,
+    top 300ms 0ms;
+  -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms,
+    height 300ms 0ms, top 300ms 0ms;
+  -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms,
+    top 300ms 0ms;
+  -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms,
+    height 300ms 0ms, top 300ms 0ms;
 }
 .contact:hover .envelope .top {
-		transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-		-ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-		-moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-		-o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-		-webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
-		
-		height: 10px;
-		top: -60px;
-		
-		transform: rotateX(180deg);
-		-ms-transform: rotateX(180deg);
-		-moz-transform: rotateX(180deg);
-		-o-transform: rotateX(180deg);
-		-webkit-transform: rotateX(180deg);
+  transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+  -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms,
+    top 300ms 150ms;
+
+  height: 10px;
+  top: -60px;
+
+  transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
 }
 .contact .envelope .outer {
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-		border-left: 83px solid transparent;
-		border-right: 82px solid transparent;
-		border-top: 70px solid #EEE;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-left: 83px solid transparent;
+  border-right: 82px solid transparent;
+  border-top: 70px solid #eee;
 }
 .contact .envelope .outer .inner {
-		position: absolute;
-		left: -81px;
-		top: -73px;
-		border-left: 81px solid transparent;
-		border-right: 80px solid transparent;
-		border-top: 68px solid #333;
+  position: absolute;
+  left: -81px;
+  top: -73px;
+  border-left: 81px solid transparent;
+  border-right: 80px solid transparent;
+  border-top: 68px solid #333;
 }
 .contact .envelope .bottom {
-		position: absolute;
-		z-index: 20;
-		bottom: 0px;
-		left: 2px;
-		border-left: 81px solid transparent;
-		border-right: 80px solid transparent;
-		border-bottom: 45px solid #333;
+  position: absolute;
+  z-index: 20;
+  bottom: 0px;
+  left: 2px;
+  border-left: 81px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 45px solid #333;
 }
 .contact .envelope .left {
-		position: absolute;
-		z-index: 20; top: 0px;
-		left: 0px;
-		border-left: 81px solid #333;
-		border-top: 45px solid transparent;
-		border-bottom: 45px solid transparent;
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  left: 0px;
+  border-left: 81px solid #333;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
 }
 .contact .envelope .right {
-		position: absolute;
-		z-index: 20;
-		top: 0px;
-		right: 0px;
-		border-right: 80px solid #333;
-		border-top: 45px solid transparent;
-		border-bottom: 45px solid transparent;
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  right: 0px;
+  border-right: 80px solid #333;
+  border-top: 45px solid transparent;
+  border-bottom: 45px solid transparent;
 }
 .contact .envelope .cover {
-		position: absolute;
-		z-index: 15;
-		bottom: 0px;
-		left: 0px;
-		height: 55%;
-		width: 100%;
-		background: #EEE;
+  position: absolute;
+  z-index: 15;
+  bottom: 0px;
+  left: 0px;
+  height: 55%;
+  width: 100%;
+  background: #eee;
 }
 .contact .envelope .paper {
-		position: absolute;
-		height: 83px;
-		padding-top: 10px;
-		width: 100%;
-		top: 0px;
-		left: 0px;
-		background: #F9F9F9;
-		z-index: 10;
-		transition: margin-top 300ms 0ms;
-		-ms-transition: margin-top 300ms 0ms;
-		-moz-transition: margin-top 300ms 0ms;
-		-o-transition: margin-top 300ms 0ms;
-		-webkit-transition: margin-top 300ms 0ms;
+  position: absolute;
+  height: 83px;
+  padding-top: 10px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: #f9f9f9;
+  z-index: 10;
+  transition: margin-top 300ms 0ms;
+  -ms-transition: margin-top 300ms 0ms;
+  -moz-transition: margin-top 300ms 0ms;
+  -o-transition: margin-top 300ms 0ms;
+  -webkit-transition: margin-top 300ms 0ms;
 }
 .contact:hover .envelope .paper {
-		margin-top: -60px;
-		transition: margin-top 300ms 150ms;
-		-ms-transition: margin-top 300ms 150ms;
-		-moz-transition: margin-top 300ms 150ms;
-		-o-transition: margin-top 300ms 150ms;
-		-webkit-transition: margin-top 300ms 150ms;
+  margin-top: -60px;
+  transition: margin-top 300ms 150ms;
+  -ms-transition: margin-top 300ms 150ms;
+  -moz-transition: margin-top 300ms 150ms;
+  -o-transition: margin-top 300ms 150ms;
+  -webkit-transition: margin-top 300ms 150ms;
 }
 .contact .envelope .paper span {
-		position: relative;
-		display: block;
-		font-size: 14px;
-		margin: 5px;
-		margin-bottom: 0px;
-		text-align: center;
-		color: #333;
-		text-decoration: none;
+  position: relative;
+  display: block;
+  font-size: 14px;
+  margin: 5px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
 }
 .contact .envelope .paper span {
-		color: #333;
-    cursor: default;
-		transition: color 200ms;
-		-ms-transition: color 200ms;
-		-moz-transition: color 200ms;
-		-o-transition: color 200ms;
-		-webkit-transition: color 200ms;
+  color: #333;
+  cursor: default;
+  transition: color 200ms;
+  -ms-transition: color 200ms;
+  -moz-transition: color 200ms;
+  -o-transition: color 200ms;
+  -webkit-transition: color 200ms;
 }
