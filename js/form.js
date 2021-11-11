@@ -1,5 +1,5 @@
 const form = document.querySelector(".form");
-const btnGetAppointment = document.querySelector("#bebutton");
+const btnGetAppointment = document.querySelector("#zhbutton");
 const btnCloseForm = document.querySelector(".close-form");
 
 const showForm = function () {

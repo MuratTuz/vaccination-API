@@ -117,7 +117,7 @@ function listUpcomingEvents() {
       }
     });
 }
-function createEvent(calendarID,praxis,description1) {
+function createEvent(calendarID,praxis,description1,date,endDate) {
   // Refer to the JavaScript quickstart on how to setup the environment:
   // https://developers.google.com/calendar/quickstart/js
   // Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
@@ -128,11 +128,11 @@ function createEvent(calendarID,praxis,description1) {
     description: description1,
     // when : dateTime,
     start: {
-      dateTime: "2021-11-07T09:00:00-07:00",
+      dateTime: date.toISOString().substring(0,19),
       timeZone: "Europe/Zurich",
     },
     end: {
-      dateTime: "2021-11-07T10:00:00-07:00",
+      dateTime: endDate,
       timeZone: "Europe/Zurich",
     },
   };
@@ -153,24 +153,32 @@ document
   .addEventListener("click", createEvent);
 
 // We group 5 has added
-var zurich = document.getElementById("zhbutton");
-zurich.addEventListener("click",zhClick);
+var firstname = document.getElementById("first-name");
+var time = document.getElementById("meeting-time");
+
+var register = document.getElementById("register");
+register.addEventListener("click",zhClick);
 function zhClick() {
+  // e.preventDefault()
  var id =  `c_fkrdk17ovdm445b09983i03s5g@group.calendar.google.com`;
   var praxisLocation = "Zurich"
-  createEvent(id,praxisLocation);
+  var description1 = firstname.value;
+  var date = new Date(time.value);
+  const endTime = date.setMinutes(date.getMinutes()+15)
+ const endDate = new Date(endTime).toISOString().substring(0,19)
+  createEvent(id,praxisLocation,description1,date,endDate);
 }
-var firstname = document.getElementById("first-name");
-// var time = document.getElementById("meeting-time").value;
 
-var bern = document.getElementById("register");
-bern.addEventListener("click",bClick);
-function bClick(){
- var id = "c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com";
- var praxisLocation = "Bern"
- var description1 = firstname.value;
-  createEvent(id,praxisLocation,description1);
-}
+
+
+// var bern = document.getElementById("register");
+// bern.addEventListener("click",bClick);
+// function bClick(){
+//  var id = "c_ton66fds60s03rfq5m4fc4ooe4@group.calendar.google.com";
+//  var praxisLocation = "Bern"
+//  var description1 = firstname.value;
+//   createEvent(id,praxisLocation,description1);
+// }
  
 var geneva = document.getElementById("gebutton");
 geneva.addEventListener("click",geClick);
