@@ -9,7 +9,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" media="screen and (max-width: 650px)" href="css/smallscreen.css" />
   <link rel="stylesheet" href="./css/form.css">
-  </head>
+</head>
 
 <body>
   <header>
@@ -17,52 +17,65 @@
       <h1 class="anime-h1">VACCINATION API</h1>
       <div>
         <img class="logo-covac" src="images/logoCovac.png" alt="vaccination" />
+      </div>
+      </section>
+      <nav class="navbar">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
-        </section>
-        <nav class="navbar">
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="#Home">Home</a></li>
-            <li class="nav-item"><a href="#Centers">CoVAC Centers</a></li>
-            <li class="nav-item"><a href="#Zurich">Zurich</a></li>
-            <li class="nav-item"><a href="#Bern">Bern</a></li>
-            <li class="nav-item"><a href="#Geneva">Geneva</a></li>
-            <li class="nav-item"><a href="#About">About Us</a></li>
-            <li class="nav-item"><a href="#Contact">Contact</a></li>
-          </ul>
-        </nav>
-        </header>
-        <main>
-          <article id="Home">
-            <section class="card">
-              <img src="./images/intro.png" alt="Vaccinated People" />
-            </section>
-            <section class="description">
-              <p>
-                Since every vaccine in Switzerland must be authorised, it has to
-                meet stringent safety, efficacy and quality requirements.
-                Swissmedic, the Swiss Agency for Therapeutic Products, has carefully
-                assessed and authorised the mRNA vaccines against COVID-19. They are
-                safe and effective. Several tens of thousands of people have
-                received the vaccines in clinical trials. They are also safe and
-                effective for the elderly and those with chronic illnesses.Since
-                their approval, hundreds of millions of people have received these
-                vaccines. Experts will continue to monitor the safety and efficacy
-                of the vaccines. The benefits of a vaccine must significantly
-                outweigh the risks. Only then will the vaccine be recommended in
-                Switzerland.
-              </p>
-              <!--Add buttons to initiate auth sequence and sign out-->
-              <button id="authorize_button" style="display: none">Authorize</button>
-              <button id="signout_button" style="display: none">Sign Out</button>
-              <button id="create-event-button">Create Event</button>
-              <pre id="content" style="white-space: pre-wrap"></pre>
-            </section>
-          </article>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#Home">Home</a></li>
+          <li class="nav-item"><a href="#Centers">CoVAC Centers</a></li>
+          <li class="nav-item"><a href="#Zurich">Zurich</a></li>
+          <li class="nav-item"><a href="#Bern">Bern</a></li>
+          <li class="nav-item"><a href="#Geneva">Geneva</a></li>
+          <li class="nav-item"><a href="#About">About Us</a></li>
+          <li class="nav-item"><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+      </header>
+      <main>
+<div id="loginForm" class="form hidden" role="dialog">
+  <form>
+    <button class="close-form">&times;</button>
+    <label class="first-name" for="first-name">First Name</label>
+    <input type="text" id="first-name" />
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" />
+    <label for="meeting-time">Choose a time for your appointment:</label>
+    <input type="datetime-local" id="meeting-time" name="meeting-time" />
+    <button id="register" type="submit">Register</button>
+  </form>
+</div>
+
+    <article id="Home">
+      <section class="card">
+        <img src="./images/intro.png" alt="Vaccinated People" />
+      </section>
+      <section class="description">
+        <p>
+          Since every vaccine in Switzerland must be authorised, it has to
+          meet stringent safety, efficacy and quality requirements.
+          Swissmedic, the Swiss Agency for Therapeutic Products, has carefully
+          assessed and authorised the mRNA vaccines against COVID-19. They are
+          safe and effective. Several tens of thousands of people have
+          received the vaccines in clinical trials. They are also safe and
+          effective for the elderly and those with chronic illnesses.Since
+          their approval, hundreds of millions of people have received these
+          vaccines. Experts will continue to monitor the safety and efficacy
+          of the vaccines. The benefits of a vaccine must significantly
+          outweigh the risks. Only then will the vaccine be recommended in
+          Switzerland.
+        </p>
+        <!--Add buttons to initiate auth sequence and sign out-->
+        <button id="authorize_button" style="display: none">Authorize</button>
+        <button id="signout_button" style="display: none">Sign Out</button>
+        <button id="create-event-button">Create Event</button>
+        <pre id="content" style="white-space: pre-wrap"></pre>
+      </section>
+    </article>
 
     <article id="Centers">
       <h1>CoVAC VACCINATION CENTERS</h1>
@@ -107,17 +120,7 @@
           style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
       </section>
       <button id="zhbutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-        </form>
-        </article>
+    </article>
 
     <article class="City" id="Bern">
       <h1>BERN</h1>
@@ -127,17 +130,7 @@
           style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
       </section>
       <button id="bebutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden" data-location="Bern">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-        </form>
-        </article>
+    </article>
 
     <article class="City" id="Geneva">
       <h1>GENEVA</h1>
@@ -147,17 +140,7 @@
           style="border: solid 1px #777" frameborder="0" scrolling="no"></iframe>
       </section>
       <button id="gebutton" class="btnAppointment">Get Appointment</button>
-      <form action="" class="form hidden">
-        <button class="close-form">&times;</button>
-        <label class="first-name" for="first-name">First Name</label>
-        <input type="text" id="first-name" />
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" />
-        <label for="meeting-time">Choose a time for your appointment:</label>
-        <input type="datetime-local" id="meeting-time" name="meeting-time" />
-        <button id="register" type="submit">Register</button>
-      </form>
-      </article>
+    </article>
 
     <article id="About">
       <h1>POWERCODERS GROUP 5</h1>
@@ -212,16 +195,17 @@
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject"></textarea>
           <button id="send-letter">Send</button>
-          </form>
-          </section>
-          </article>
-          </main>
-          <footer>
-            <section id="footer-connect">
+        </form>
+        </section>
+        </article>
+        </main>
+
+  <footer>
+    <section id="footer-connect">
       <a href="https://www.facebook.com/"><img src="images/icon-facebook.gif" alt="facebook" /></a>
       <a href="https://twitter.com/"><img src="images/icon-twitter.gif" alt="twitter" /></a>
       <a href="https://www.youtube.com/"><img src="images/icon-youtube.gif" alt="youtube" /></a>
-      </section>
+    </section>
 
     <section id="footer-nav">
       <nav>
@@ -243,7 +227,7 @@
         </ul>
       </article>
     </section>
-    </footer>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="js/script.js"></script>
@@ -251,6 +235,6 @@
   <script src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
     onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
   <script src="./js/form.js"></script>
-  </body>
+</body>
 
 </html>

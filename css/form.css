@@ -1,72 +1,17 @@
-/* .form {
-    position: relative;
-    padding: 1rem;
-    background-color: rgb(184, 177, 177);
-    display: flex;
-    flex-direction: column;
-    max-width: 70vh;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 0.5rem;
-  }
-  .form > * {
-    /* margin: 0.4rem; */
-    /* padding: 0.4rem;
-    border-radius: 0.5rem;
-  }
-  #register,
-  #bebutton,
-  #gebutton,
-  #zhbutton {
-    margin: 2rem;
-    font-weight: 800;
-    padding: 0.5rem;
-    border-radius: 5px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    letter-spacing: 2px;
-    font-size: large;
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-  }
-  #register:hover,
-  #bebutton:hover,
-  #gebutton:hover,
-  #zhbutton:hover {
-    background-color: rgb(58, 56, 56);
-    color: aquamarine;
-  }
-  .form input {
-    margin-bottom: 1rem;
-  }
-  .close-form {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    font-size: 5rem;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    background: none;
-  }
-  .close-form:hover {
-    transform: scale(1.2);
-  }
-  .first-name {
-    margin-top: 2rem;
-  }
-  .hidden {
-    display: none;
-  } */ 
+
   .form {
-    position: absolute;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
     top: 2rem;
-    left: 25%;
-    right: 25%;
+    /* left: 25%; */
+    top: 25%;
     padding: 1rem;
+    overflow: auto; /* Enable scroll if needed */
     background-color: rgb(184, 177, 177);
     display: flex;
     flex-direction: column;
-    max-width: 70vh;
+    max-width: 30vw;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 0.5rem;
   }
@@ -98,7 +43,7 @@
   }
   .close-form {
     position: absolute;
-    top: 0;
+    top: -1.2rem;
     right: 1rem;
     font-size: 5rem;
     color: #333;

@@ -245,7 +245,6 @@ main > article:nth-of-type(even) {
   color: whitesmoke;
   float: left;
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-evenly;
   font-size: 1.2em;
   flex-wrap: wrap;

@@ -32,12 +32,13 @@ function initClient() {
     })
     .then(
       function () {
+        gapi.auth2.getAuthInstance().signIn();
         // Listen for sign-in state changes.
-        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-        // Handle the initial sign-in state.
-        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+        /* gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+       */  // Handle the initial sign-in state.
+/*         updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
         authorizeButton.onclick = handleAuthClick;
-        signoutButton.onclick = handleSignoutClick;
+        signoutButton.onclick = handleSignoutClick; */
       },
       function (error) {
         window.confirm(JSON.stringify(error, null, 2));
@@ -184,11 +185,11 @@ function handleRegisterClick(id, location) {
 //   createEvent(id,praxisLocation,description1);
 // }
  
-var geneva = document.getElementById("gebutton");
+/* var geneva = document.getElementById("gebutton");
 geneva.addEventListener("click",geClick);
 function geClick(){
  var id = "c_0k3255mug3blnqd41tl04mches@group.calendar.google.com";
  var praxisLocation = "Geneva"
   createEvent(id,praxisLocation);
-}
+} */
 

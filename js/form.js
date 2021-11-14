@@ -17,8 +17,15 @@ document
   .querySelector("input[type='datetime-local']")
   .setAttribute("max", endTime);
 
-const showForm = function (event) {
+const showFormLeft = function (event) {
   event.preventDefault();
+  form.style.left = "0";
+  form.classList.remove("hidden");
+};
+
+const showFormRight = function (event) {
+  event.preventDefault();
+  form.style.right = "0";
   form.classList.remove("hidden");
 };
 
@@ -32,5 +39,6 @@ const getAppointment = document.querySelectorAll(".btnAppointment");
 const btnCloseForm = document.querySelector(".close-form");
 
 getAppointment.forEach((app) => {
-  app.addEventListener("click", showForm);
+  if (app.id === "bebutton") app.addEventListener("click", showFormRight);
+  else app.addEventListener("click", showFormLeft);
 });
